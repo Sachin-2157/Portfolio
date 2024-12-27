@@ -1,0 +1,445 @@
+/* Color Palette */
+:root {
+  --primary-color: #8cbcb9;
+  --secondary-color: #274f5d;
+  --dark-color: #242032;
+  --white-color: #ffffff;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  display: flex;
+  width: 100%;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  left: -250px; /* Hidden by default */
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #111;
+  padding: 20px;
+  transition: left 0.3s ease; /* Smooth transition for sidebar */
+  z-index: 1000;
+}
+
+.sidebar h2 {
+  color: #2f32e3ca;
+  margin-left: 50x;
+}
+.sidebar.active {
+  left: 0;
+}
+
+/* Sidebar close button */
+.close-btn {
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: auto;
+  border: 10px solid rgb(75, 74, 74);
+
+  margin-bottom: 15px;
+}
+.profile-pic:hover {
+  /* color : rgb(148, 177, 228); */
+
+  color: rgb(189, 18, 32);
+}
+
+.social-links {
+  margin-top: 30px;
+}
+.social-links a {
+  margin-top: 25px;
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  display: inline;
+}
+.social-links a:hover {
+  color: red;
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  display: inline-flexbox;
+}
+
+.nav-menu ul li {
+  margin: 10px 0; /* Adding some spacing between items */
+}
+
+.nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+  /* display: inline; Change to inline-block to prevent hover effect on empty space */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+  color: #ff5656; /* Change color on hover */
+  transform: scale(1.1); /* Slightly increase size */
+}
+
+footer {
+  margin-top: 175px;
+  /* padding-bottom: 20px; */
+  color: rgb(241, 244, 196);
+}
+
+/* Main content styles */
+.main-content {
+  padding: 20px;
+  width: 100%;
+  transition: margin-left 0.3s ease;
+}
+.sidebar.active ~ .main-content {
+  margin-left: 250px; /* Only add margin when sidebar is active */
+}
+
+.hero {
+  position: cover;
+  text-align: left;
+}
+
+.hero img {
+  margin: 0;
+  width: 100%; /* Ensures full width, adjust based on your needs */
+  height: auto;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 3rem;
+}
+
+.animated-text {
+  color: #ff5656;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.animated-text::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+}
+
+/* Main Content */
+.content {
+  margin-left: 250px; /* Adjust according to sidebar width */
+  padding: 30px;
+  flex: 1;
+  background-color: var(--white-color);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  color: var(--dark-color);
+}
+
+.hero p {
+  font-size: 18px;
+  /* color: var(--primary-color); */
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  /* background-color: var(--primary-color); */
+  color: var(--white-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: var(--dark-color);
+}
+
+/* About Section */
+.about {
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-bottom: 150px;
+}
+
+.about h2 {
+  margin-left: 20px;
+  font-size: 28px;
+  /* color: var(--dark-color); */
+  color: wheat;
+}
+
+.about p {
+  margin-left: 20px;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Education Section */
+.education {
+  margin: 20px 0 50px 20px;
+}
+.edu {
+  height: auto;
+  width: 700px;
+  margin-left: 20px;
+  text-shadow: #ff5656;
+}
+.education h2 {
+  font-size: 28px;
+  color: wheat;
+  margin-bottom: 20px;
+}
+.education p {
+  margin-left: 7px;
+}
+.education-entry {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #242032; /* A dark color to match theme */
+  border-left: 5px solid var(--primary-color);
+  border-radius: 8px;
+}
+
+.education-entry h3 {
+  font-size: 20px;
+  color: wheat;
+  margin-bottom: 8px;
+}
+
+.education-entry p {
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Project Section */
+.amazon {
+  display: inline;
+  margin-left: 20px;
+}
+.projects h2 {
+  font-size: 28px;
+  color: wheat;
+  cursor: pointer;
+  margin-left: 30px;
+  /* transition: color 0.3s ease; */
+}
+
+.projects h2:hover {
+  color: #ff5656;
+}
+
+.project-list {
+  display: block; /* Hidden by default */
+  margin-left: 35px;
+  flex-direction: column;
+  gap: 19px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.project-list a {
+  color: #FFFFFF;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline; /* Keeps background only on text */
+}
+/* .projects_new a{
+  margin-bottom: 10px;
+} */
+ .project-list a{
+  margin-bottom: 5px;
+ }
+.project-list a:hover {
+  background-color: #242032; /* Background color on hover */
+  color: #ff5656;
+  padding: 0; /* Removes extra space */
+}
+
+
+.project-link:hover {
+  color: wheat;
+}
+
+/* Contact Section */
+
+.map {
+  width: 600px;
+  height: 450px;
+  margin-left: 39px;
+  border-radius: 5px;
+  box-shadow: 0 0 1rem rgba(15, 21, 19, 0.5);
+}
+.contact {
+  background-color: rgb(53, 17, 17);
+  display: inline;
+  width: 150px;
+  height: 120px;
+}
+.contact h2 {
+  color: wheat;
+  margin-left: 20px;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+/* .contact2{
+  margin-left: 78%;
+  width: 100px;
+  height: 100px;
+  background-color: #242032; */
+/* } */
+.contact-form input,
+.contact-form textarea {
+  margin-left: 75%;
+  padding: 10px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 16px;
+  color: var(--dark-color);
+  /* width: 100%; */
+  width: fit-content;
+}
+
+.contact h2 {
+  margin-left: 75%;
+}
+.cta-button {
+  margin-left: 78%;
+  background-color: #274f5d;
+}
+
+.contact-form button:hover {
+  background-color: var(--dark-color);
+}
+
+/* Menu Button (Hamburger Icon) */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1000;
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-btn:hover {
+  color: #ff5656; /* Change color on hover */
+  transform: scale(1.1); /* Slightly increase size */
+}
+
+/* Sidebar Close Button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff5656; /* Change color on hover */
+  transform: scale(1.1); /* Slightly increase size */
+}
+
+/* Social Media Links Hover */
+.social-links a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff5656; /* Change color on hover */
+  transform: scale(1.1); /* Slightly increase size */
+}
+
+/* Navigation Links Hover */
+.nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+  color: #ff5656; /* Change color on hover */
+  transform: scale(1.1); /* Slightly increase size */
+}
+
+.contact {
+  width: 150px;
+  height: 150px;
+  background-color: #111;
+}

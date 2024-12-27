@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Toggle Button -->
+        <div class="menu-btn" id="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- Sidebar (Collapsible Menu) -->
+        <div class="sidebar" id="sidebar">
+            <div class="close-btn" id="close-btn">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="profile">
+                <img src="profilepic/profile.jpg" alt="Profile Picture" class="profile-pic">
+                <h2><strong>Sachin Kumar</strong></h2>
+                <div class="social-links">
+                    <a href="https://x.com/sach_in_09" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/_sach_i.n/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/Sachin-2157" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/viewSachinkumar/"  target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <footer>
+                <p> <h5>© All Rights Reserved</h5></p>
+            </footer>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Hero Section -->
+            <div class="hero">
+                <!-- <img src="PHOTOS/heroimg1.jpg" alt="Hero Image"> -->
+                <div class="hero-text">
+                    <!-- <h1>I'm a <span class="animated-text"></span></h1> -->
+                </div>
+            </div>
+
+            <!-- About Me Section -->
+            <section id="about" class="about">
+                <h2>About Me</h2>
+                <p>I am a second-semester student pursuing BTech in Information Technology from MIT Muzaffarpur. I have a keen interest in web development, competitive programming, and system design.</p>
+            </section>
+
+
+            <!-- Education section -->
+             <!-- Education Section -->
+              <div class="edu">
+<section id="education" class="education">
+    <h2>Education</h2>
+    <div class="education-entry">
+        <h3><B>BACHELOR OF TECHONOLOGY (IT)</B></h3>
+        <p><i>Muzaffarpur Institute of Technology, Muzaffarpur </i></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <br> Fuga commodi iste dolore ut explicabo debitis, iure deleniti officiis minus vitae cum voluptatibus incidunt unde ad, nostrum aspernatur <br>Sit, esse nobis?</p>
+    <!-- </div> --> <br>
+    <!-- <div class="education-entry"> -->
+        <h3>SENIOR SECONDARY</h3>
+        <P><i>Guru Kripa Academy, Kahalgaon, Bhagalpur</i></P>
+        <br>
+        <p>Pursued my higher secondary education at Guru K Acad, concentrating on the science stream with Physics, Chemistry, and Mathematics</p>
+    <!-- </div> -->
+    
+    <!-- <div class="education-entry"> -->
+        <br>
+        <h3>SECONDARY</h3>
+        <p><i>DAV Public School, Mathurapur, Bhagalpur</i></p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure animi neque molestiae possimus quaerat temporibus, maxime dolor officia quasi accusantium magni cumque et eum? Dignissimos dolores dolore suscipit accusantium magnam.</p>
+    </div>
+</section>
+</div>
+
+            <!-- Projects Section -->
+<section id="projects" class="projects">
+    <h2 onclick="toggleProjects()">Projects</h2> <!-- Add onclick event -->
+    <div class="project-list" id="project-list">
+        <a class="projects_new" href="link-to-amazon-clone" target="_blank"><i>Amazon Clone</i></a><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatibus rerum, quam error ut accusamus dicta explicabo accusantium fuga qui maiores eos consequatur tempore. Error corporis impedit minima cumque inventore.</p>
+        <a class="projects_new" href="link-to-planner" target="_blank"><i>Planner</i></a><br>
+        <a class="projects_new" href="link-to-qr-generator" target="_blank">QR Generator</a><br>
+        <a class="projects_new" href="link-to-rock-paper-scissors" target="_blank">Rock Paper & Scissors</a><br>
+        <a class="projects_new" href="link-to-tic-tac-toe" target="_blank">Tic Tac Toe</a><br>
+        <a class="projects_new" href="link-to-to-do-list" target="_blank">To Do List</a><br>
+    </div>
+</section>
+
+
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4296.44107616032!2d85.36261916533311!3d26.141506034553117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed10ba819d5e53%3A0x72af98e5f6deb67c!2sMIT%20Muzaffarpur!5e0!3m2!1sen!2sin!4v1730028762914!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- Contact Section -->
+             <div class="contact2">
+            <section id="contact" class="contact">
+                <h2>Contact Me</h2>
+                <form action="your-form-action" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required style="display: inline;">
+                    <input type="email" name="email" placeholder="Your Email" required style="display: inline;">
+                    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="cta-button" href ="sachiny2157@gmail.com" style="width: fit-content">Send Message</button>
+                   
+                </form>
+            </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inline JavaScript for Sidebar Toggle -->
+    <script src="script.js">
+       
+    </script>
+</body>
+</html>
